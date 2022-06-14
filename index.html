@@ -13,11 +13,12 @@
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-		<!-- DataTables Table CSS -->
+		<!-- DataTables CSS -->
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+		<link rel="stylesheet" href="https://cdn.datatables.net/datetime/1.1.2/css/dataTables.dateTime.min.css">
 
 		<!-- CSS -->
-		<link rel="stylesheet" href="./style.css">
+		<!-- <link rel="stylesheet" href="./css/style.css"> -->
 
 	</head>
 
@@ -28,6 +29,10 @@
 			<div class="content">
 
 				<div class="row">
+
+					<!-- <div>
+						Toggle column: <a class="toggle-vis" data-column="0">Name</a> - <a class="toggle-vis" data-column="1">Position</a> - <a class="toggle-vis" data-column="2">Office</a> - <a class="toggle-vis" data-column="3">Age</a> - <a class="toggle-vis" data-column="4">Start date</a> - <a class="toggle-vis" data-column="5">Salary</a>
+					</div> -->
 
 					<div class="">
 
@@ -42,7 +47,7 @@
 
 					</div>
 
-					<div class="col-4">
+					<!-- <div class="col-4">
 
 						<div class="btn-group submitter-group float-right">
 
@@ -68,6 +73,13 @@
 
 						</div>
 
+					</div> -->
+
+					<div>
+						<input type="text" id="search_4" name="search_4" class="form-control input-xs table-filter" style="width: 100%;"
+							placeholder="Start date">
+						<input type="text" id="search_5" name="search_5" class="form-control input-xs table-filter" style="width: 100%;"
+							placeholder="End date">
 					</div>
 
 				</div>
@@ -83,7 +95,7 @@
 						<th>Office</th>
 						<th>Age</th>
 						<th>Start date</th>
-						<th>End date</th>
+						<!-- <th>End date</th> -->
 						<th>Salary</th>
 						<th>Status</th>
 						<th>Hidden</th>
@@ -109,15 +121,19 @@
 								placeholder="Age">
 						</th>
 						<th>
-							<input type="date" id="search_4" class="form-control input-xs table-filter" style="width: 100%;"
+							<input type="text" id="search_4" name="search_4" class="form-control input-xs table-filter" style="width: 100%;"
+								placeholder="Start date">
+						</th>
+						<!-- <th>
+							<input type="text" id="search_4" name="search_4" class="form-control input-xs table-filter" style="width: 100%;"
 								placeholder="Start date">
 						</th>
 						<th>
-							<input type="date" id="search_5" class="form-control input-xs table-filter" style="width: 100%;"
+							<input type="text" id="search_5" name="search_5" class="form-control input-xs table-filter" style="width: 100%;"
 								placeholder="End date">
-						</th>
+						</th> -->
 						<th>
-							<input type="text" id="search_6" class="form-control input-xs table-filter" style="width: 100%;"
+							<input type="text" id="search_5" class="form-control input-xs table-filter" style="width: 100%;"
 								placeholder="Salary">
 						</th>
 						<th>
@@ -145,7 +161,6 @@
 						<td>Edinburgh</td>
 						<td>61</td>
 						<td>2011/04/25</td>
-						<td>2012/12/01</td>
 						<td>$320,800</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -160,7 +175,6 @@
 						<td>Tokyo</td>
 						<td>63</td>
 						<td>2011/07/25</td>
-						<td>2012/12/01</td>
 						<td>$170,750</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -175,7 +189,6 @@
 						<td>San Francisco</td>
 						<td>66</td>
 						<td>2009/01/12</td>
-						<td>2012/12/01</td>
 						<td>$86,000</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -190,7 +203,6 @@
 						<td>Edinburgh</td>
 						<td>22</td>
 						<td>2012/03/29</td>
-						<td>2012/12/01</td>
 						<td>$433,060</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -205,7 +217,6 @@
 						<td>Tokyo</td>
 						<td>33</td>
 						<td>2008/11/28</td>
-						<td>2012/12/01</td>
 						<td>$162,700</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -220,7 +231,6 @@
 						<td>New York</td>
 						<td>61</td>
 						<td>2012/12/02</td>
-						<td>2012/12/01</td>
 						<td>$372,000</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -235,7 +245,6 @@
 						<td>San Francisco</td>
 						<td>59</td>
 						<td>2012/08/06</td>
-						<td>2012/12/01</td>
 						<td>$137,500</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -250,7 +259,6 @@
 						<td>Tokyo</td>
 						<td>55</td>
 						<td>2010/10/14</td>
-						<td>2012/12/01</td>
 						<td>$327,900</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -265,7 +273,6 @@
 						<td>San Francisco</td>
 						<td>39</td>
 						<td>2009/09/15</td>
-						<td>2012/12/01</td>
 						<td>$205,500</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -280,7 +287,6 @@
 						<td>Edinburgh</td>
 						<td>23</td>
 						<td>2008/12/13</td>
-						<td>2012/12/01</td>
 						<td>$103,600</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -295,7 +301,6 @@
 						<td>London</td>
 						<td>30</td>
 						<td>2008/12/19</td>
-						<td>2012/12/01</td>
 						<td>$90,560</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -310,7 +315,6 @@
 						<td>Edinburgh</td>
 						<td>22</td>
 						<td>2013/03/03</td>
-						<td>2012/12/01</td>
 						<td>$342,000</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -325,7 +329,6 @@
 						<td>San Francisco</td>
 						<td>36</td>
 						<td>2008/10/16</td>
-						<td>2012/12/01</td>
 						<td>$470,600</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -340,7 +343,6 @@
 						<td>London</td>
 						<td>43</td>
 						<td>2012/12/18</td>
-						<td>2012/12/01</td>
 						<td>$313,500</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -355,7 +357,6 @@
 						<td>London</td>
 						<td>19</td>
 						<td>2010/03/17</td>
-						<td>2012/12/01</td>
 						<td>$385,750</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -370,7 +371,6 @@
 						<td>London</td>
 						<td>66</td>
 						<td>2012/11/27</td>
-						<td>2012/12/01</td>
 						<td>$198,500</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -385,7 +385,6 @@
 						<td>New York</td>
 						<td>64</td>
 						<td>2010/06/09</td>
-						<td>2012/12/01</td>
 						<td>$725,000</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -400,7 +399,6 @@
 						<td>New York</td>
 						<td>59</td>
 						<td>2009/04/10</td>
-						<td>2012/12/01</td>
 						<td>$237,500</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -415,7 +413,6 @@
 						<td>London</td>
 						<td>41</td>
 						<td>2012/10/13</td>
-						<td>2012/12/01</td>
 						<td>$132,000</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -430,7 +427,6 @@
 						<td>Edinburgh</td>
 						<td>35</td>
 						<td>2012/09/26</td>
-						<td>2012/12/01</td>
 						<td>$217,500</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -445,7 +441,6 @@
 						<td>New York</td>
 						<td>30</td>
 						<td>2011/09/03</td>
-						<td>2012/12/01</td>
 						<td>$345,000</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -460,7 +455,6 @@
 						<td>New York</td>
 						<td>40</td>
 						<td>2009/06/25</td>
-						<td>2012/12/01</td>
 						<td>$675,000</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -475,7 +469,6 @@
 						<td>New York</td>
 						<td>21</td>
 						<td>2011/12/12</td>
-						<td>2012/12/01</td>
 						<td>$106,450</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -490,7 +483,6 @@
 						<td>Sidney</td>
 						<td>23</td>
 						<td>2010/09/20</td>
-						<td>2012/12/01</td>
 						<td>$85,600</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -505,7 +497,6 @@
 						<td>London</td>
 						<td>47</td>
 						<td>2009/10/09</td>
-						<td>2012/12/01</td>
 						<td>$1,200,000</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -520,7 +511,6 @@
 						<td>Edinburgh</td>
 						<td>42</td>
 						<td>2010/12/22</td>
-						<td>2012/12/01</td>
 						<td>$92,575</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -535,7 +525,6 @@
 						<td>Singapore</td>
 						<td>28</td>
 						<td>2010/11/14</td>
-						<td>2012/12/01</td>
 						<td>$357,650</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -550,7 +539,6 @@
 						<td>San Francisco</td>
 						<td>28</td>
 						<td>2011/06/07</td>
-						<td>2012/12/01</td>
 						<td>$206,850</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -565,7 +553,6 @@
 						<td>San Francisco</td>
 						<td>48</td>
 						<td>2010/03/11</td>
-						<td>2012/12/01</td>
 						<td>$850,000</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -580,7 +567,6 @@
 						<td>Tokyo</td>
 						<td>20</td>
 						<td>2011/08/14</td>
-						<td>2012/12/01</td>
 						<td>$163,000</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -595,7 +581,6 @@
 						<td>Sidney</td>
 						<td>37</td>
 						<td>2011/06/02</td>
-						<td>2012/12/01</td>
 						<td>$95,400</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -610,7 +595,6 @@
 						<td>London</td>
 						<td>53</td>
 						<td>2009/10/22</td>
-						<td>2012/12/01</td>
 						<td>$114,500</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -625,7 +609,6 @@
 						<td>London</td>
 						<td>27</td>
 						<td>2011/05/07</td>
-						<td>2012/12/01</td>
 						<td>$145,000</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -640,7 +623,6 @@
 						<td>San Francisco</td>
 						<td>22</td>
 						<td>2008/10/26</td>
-						<td>2012/12/01</td>
 						<td>$235,500</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -655,7 +637,6 @@
 						<td>Edinburgh</td>
 						<td>46</td>
 						<td>2011/03/09</td>
-						<td>2012/12/01</td>
 						<td>$324,050</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -670,7 +651,6 @@
 						<td>San Francisco</td>
 						<td>47</td>
 						<td>2009/12/09</td>
-						<td>2012/12/01</td>
 						<td>$85,675</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -685,7 +665,6 @@
 						<td>San Francisco</td>
 						<td>51</td>
 						<td>2008/12/16</td>
-						<td>2012/12/01</td>
 						<td>$164,500</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -700,7 +679,6 @@
 						<td>San Francisco</td>
 						<td>41</td>
 						<td>2010/02/12</td>
-						<td>2012/12/01</td>
 						<td>$109,850</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -715,7 +693,6 @@
 						<td>San Francisco</td>
 						<td>62</td>
 						<td>2009/02/14</td>
-						<td>2012/12/01</td>
 						<td>$452,500</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -730,7 +707,6 @@
 						<td>London</td>
 						<td>37</td>
 						<td>2008/12/11</td>
-						<td>2012/12/01</td>
 						<td>$136,200</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -745,7 +721,6 @@
 						<td>New York</td>
 						<td>65</td>
 						<td>2008/09/26</td>
-						<td>2012/12/01</td>
 						<td>$645,750</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -760,7 +735,6 @@
 						<td>Singapore</td>
 						<td>64</td>
 						<td>2011/02/03</td>
-						<td>2012/12/01</td>
 						<td>$234,500</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -775,7 +749,6 @@
 						<td>London</td>
 						<td>38</td>
 						<td>2011/05/03</td>
-						<td>2012/12/01</td>
 						<td>$163,500</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -790,7 +763,6 @@
 						<td>Tokyo</td>
 						<td>37</td>
 						<td>2009/08/19</td>
-						<td>2012/12/01</td>
 						<td>$139,575</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -805,7 +777,6 @@
 						<td>New York</td>
 						<td>61</td>
 						<td>2013/08/11</td>
-						<td>2012/12/01</td>
 						<td>$98,540</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -820,7 +791,6 @@
 						<td>San Francisco</td>
 						<td>47</td>
 						<td>2009/07/07</td>
-						<td>2012/12/01</td>
 						<td>$87,500</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -835,7 +805,6 @@
 						<td>Singapore</td>
 						<td>64</td>
 						<td>2012/04/09</td>
-						<td>2012/12/01</td>
 						<td>$138,575</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -850,7 +819,6 @@
 						<td>New York</td>
 						<td>63</td>
 						<td>2010/01/04</td>
-						<td>2012/12/01</td>
 						<td>$125,250</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -865,7 +833,6 @@
 						<td>San Francisco</td>
 						<td>56</td>
 						<td>2012/06/01</td>
-						<td>2012/12/01</td>
 						<td>$115,000</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -880,7 +847,6 @@
 						<td>Edinburgh</td>
 						<td>43</td>
 						<td>2013/02/01</td>
-						<td>2012/12/01</td>
 						<td>$75,650</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -895,7 +861,6 @@
 						<td>New York</td>
 						<td>46</td>
 						<td>2011/12/06</td>
-						<td>2012/12/01</td>
 						<td>$145,600</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -910,7 +875,6 @@
 						<td>London</td>
 						<td>47</td>
 						<td>2011/03/21</td>
-						<td>2012/12/01</td>
 						<td>$356,250</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -925,7 +889,6 @@
 						<td>London</td>
 						<td>21</td>
 						<td>2009/02/27</td>
-						<td>2012/12/01</td>
 						<td>$103,500</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -940,7 +903,6 @@
 						<td>San Francisco</td>
 						<td>30</td>
 						<td>2010/07/14</td>
-						<td>2012/12/01</td>
 						<td>$86,500</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -955,7 +917,6 @@
 						<td>Edinburgh</td>
 						<td>51</td>
 						<td>2008/11/13</td>
-						<td>2012/12/01</td>
 						<td>$183,000</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -970,7 +931,6 @@
 						<td>Singapore</td>
 						<td>29</td>
 						<td>2011/06/27</td>
-						<td>2012/12/01</td>
 						<td>$183,000</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -985,7 +945,6 @@
 						<td>New York</td>
 						<td>27</td>
 						<td>2011/01/25</td>
-						<td>2012/12/01</td>
 						<td>$112,000</td>
 						<td>
 							<div class="badge status-badge badge-info">
@@ -1004,9 +963,6 @@
 		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 		<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 
-		<!-- Page Number -->
-		<script src=""></script>
-
 		<!-- Export Buttons -->
 		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 		<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
@@ -1016,7 +972,11 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
 		<script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
 		<script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
-
+		
+		<!-- Date Ranger -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+		<script src="https://cdn.datatables.net/datetime/1.1.2/js/dataTables.dateTime.min.js"></script>
+		
 		<!-- JavaScript -->
 		<script src="./js/main.js"></script>
 

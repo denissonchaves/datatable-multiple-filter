@@ -15,7 +15,7 @@
 
 		<!-- DataTables Table CSS -->
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-		
+
 		<!-- CSS -->
 		<link rel="stylesheet" href="./style.css">
 
@@ -24,22 +24,34 @@
 	<body>
 
 		<div class="container">
+
 			<div class="content">
+
 				<div class="row">
-					<div class="col-8">
+
+					<div class="">
+
 						<div class="filter-wrapper">
-							<input type="checkbox" class="filter-checkbox" value="Software Engineer" /> Software Engineer
-							<input type="checkbox" class="filter-checkbox" value="Accountant" /> Accountant
-							<input type="checkbox" class="filter-checkbox" value="Sales Assistant" /> Sales Assistant
-							<input type="checkbox" class="filter-checkbox" value="Developer" /> Developer
+
+							<input type="checkbox" class="filter-checkbox" value="Software Engineer"> Software Engineer
+							<input type="checkbox" class="filter-checkbox" value="Accountant"> Accountant
+							<input type="checkbox" class="filter-checkbox" value="Sales Assistant"> Sales Assistant
+							<input type="checkbox" class="filter-checkbox" value="Developer"> Developer
+
 						</div>
+
 					</div>
+
 					<div class="col-4">
+
 						<div class="btn-group submitter-group float-right">
+
 							<div class="input-group-prepend">
-								<div class="input-group-text">Status</div>
+								<span class="input-group-text">Status</span>
 							</div>
+							
 							<select class="form-control status-dropdown">
+
 								<option value="">All</option>
 								<option value="DRF">Draft</option>
 								<option value="PCH">Pending Review</option>
@@ -51,13 +63,19 @@
 								<option value="Rejected">Rejected</option>
 								<option value="Amended">Amended</option>
 								<option value="Cancelled">Cancelled</option>
+								
 							</select>
+
 						</div>
+
 					</div>
+
 				</div>
+
 			</div>
+
 			<table id="example" class="table">
-				
+
 				<thead>
 					<tr>
 						<th>Name</th>
@@ -71,41 +89,38 @@
 						<th>Hidden</th>
 					</tr>
 				</thead>
+
 				<tfoot style="display: table-header-group;">
 					<tr>
 						<th>
 							<input type="text" id="search_0" class="form-control input-xs table-filter" style="width: 100%;"
-								placeholder="Name" />
+								placeholder="Name">
 						</th>
 						<th>
 							<input type="text" id="search_1" class="form-control input-xs table-filter" style="width: 100%;"
-								placeholder="Position" />
+								placeholder="Position">
 						</th>
 						<th>
 							<input type="text" id="search_2" class="form-control input-xs table-filter" style="width: 100%;"
-								placeholder="Office" />
+								placeholder="Office">
 						</th>
 						<th>
 							<input type="text" id="search_3" class="form-control input-xs table-filter" style="width: 100%;"
-								placeholder="Age" />
+								placeholder="Age">
 						</th>
 						<th>
 							<input type="date" id="search_4" class="form-control input-xs table-filter" style="width: 100%;"
-								placeholder="Start date" />
+								placeholder="Start date">
 						</th>
 						<th>
 							<input type="date" id="search_5" class="form-control input-xs table-filter" style="width: 100%;"
-								placeholder="End date" />
+								placeholder="End date">
 						</th>
 						<th>
 							<input type="text" id="search_6" class="form-control input-xs table-filter" style="width: 100%;"
-								placeholder="Salary" />
+								placeholder="Salary">
 						</th>
 						<th>
-							<!--<input type="text" id="search_7"
-								class="form-control input-xs table-filter"
-								style="width: 100%;"
-								placeholder="Status"/>  -->
 							<select class="form-control status-dropdown">
 								<option value="">All</option>
 								<option value="DRF">Draft</option>
@@ -122,6 +137,7 @@
 						</th>
 					</tr>
 				</tfoot>
+
 				<tbody>
 					<tr>
 						<td>Tiger Nixon</td>
@@ -979,17 +995,15 @@
 						<td>DRF</td>
 					</tr>
 				</tbody>
-				
+
 			</table>
 		</div>
-
-		<table></table>
 
 		<!-- DataTables -->
 		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 		<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-		
+
 		<!-- Page Number -->
 		<script src=""></script>
 

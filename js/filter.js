@@ -3,24 +3,21 @@ $(document).ready(function () {
     // Hidden Column
     columnDefs: [
       {
-        targets: [7],
+        targets: [],
         visible: false,
       },
     ],
 
     // Export Files Buttons
-    dom: 'Bfrtip',
-    buttons: [
-        'copy', 'csv', 'excel', 'pdf', 'print'
-    ],
+    dom: 'Blfrtip',
+    buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
 
     // Language
-    "language": {
-      "url": "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"
+    language: {
+      url: 'http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json',
     },
-    
   });
-  
+
   // dataTable.columns().every(function () {
   //   var that = this;
 
@@ -39,16 +36,25 @@ $(document).ready(function () {
         searchTerms.push('^' + $(this).val() + '$');
       }
     });
-    dataTable.column(1).search(searchTerms.join('|'), true, false, true).draw();
+    dataTable.column(2).search(searchTerms.join('|'), true, false, true).draw();
   });
 
-  // Select Filter
-  $('.status-dropdown').on('change', function (e) {
+  // Select Filter - Column 7
+  $('#search_7').on('change', function (e) {
     var status = $(this).val();
-    $('.status-dropdown').val(status);
+    $('#search_7').val(status);
     console.log(status);
     //dataTable.column(6).search('\\s' + status + '\\s', true, false, true).draw();
     dataTable.column(7).search(status).draw();
+  });
+
+  // Select Filter - Column 8
+  $('#search_8').on('change', function (e) {
+    var status = $(this).val();
+    $('#search_8').val(status);
+    console.log(status);
+    //dataTable.column(6).search('\\s' + status + '\\s', true, false, true).draw();
+    dataTable.column(8).search(status).draw();
   });
 
   // $('#example').each(function() {
@@ -67,7 +73,7 @@ $(document).ready(function () {
   //   });
   // });
 
-  // Search Filter - Works only on 1st column
+  // Search Filter - Column 0
   $('#search_0').on('keyup change', function (e) {
     var that = $(this).val();
     $('#search_0').val(that);
@@ -75,8 +81,8 @@ $(document).ready(function () {
     // dataTable.column().search('\\s' + that + '\\s', true, false, true).draw();
     dataTable.column(0).search(that).draw();
   });
-  
-  // Search Filter - Works only on 2st column
+
+  // Search Filter - Column 1
   $('#search_1').on('keyup change', function (e) {
     var that = $(this).val();
     $('#search_1').val(that);
@@ -85,7 +91,7 @@ $(document).ready(function () {
     dataTable.column(1).search(that).draw();
   });
 
-  // Search Filter - Works only on 3st column
+  // Search Filter - Column 2
   $('#search_2').on('keyup change', function (e) {
     var that = $(this).val();
     $('#search_2').val(that);
@@ -93,54 +99,54 @@ $(document).ready(function () {
     // dataTable.column().search('\\s' + that + '\\s', true, false, true).draw();
     dataTable.column(2).search(that).draw();
   });
-  
+
   // Show/Hide Columns - Testing
-  // $('a.toggle-vis').on('click', function (e) {
-  //   e.preventDefault();
+  $('a .toggle-vis').on('click', function (e) {
+    e.preventDefault();
 
-  //   // Get the column API object
-  //   var column = table.column($(this).attr('data-column'));
+    // Get the column API object
+    var column = table.column($(this).attr('data-column'));
 
-  //   // Toggle the visibility
-  //   column.visible(!column.visible());
-  // });
-
+    // Toggle the visibility
+    column.visible(!column.visible());
+  });
 });
 
-// Date Range Filter - Replace the
-// Custom filtering function which will search data in column four between two values
-$.fn.dataTable.ext.search.push(
-  function( settings, data, dataIndex ) {
+// Date Range Filter
+$(document).ready(function () {
+  // Custom filtering function which will search data in column four between two values
+  $.fn.dataTable.ext.search.push(function (settings, data, dataIndex) {
     var min = minDate.val();
+    // console.log('min', min);
     var max = maxDate.val();
-    var date = new Date( data[4] );
+    // console.log('min', min);
+    var date = moment(new Date(data[1]));
+    // console.log('date', date);
 
     if (
-      ( min === null && max === null ) ||
-      ( min === null && date <= max ) ||
-      ( min <= date   && max === null ) ||
-      ( min <= date   && date <= max )
+      (min === null && max === null) ||
+      (min === null && date <= max) ||
+      (min <= date && max === null) ||
+      (min <= date && date <= max)
     ) {
       return true;
     }
     return false;
-  }
-);
-
-$(document).ready(function() {
-  // Create date inputs
-  minDate = new DateTime($('#search_4'), {
-    format: 'YYYY/MM/DD'
   });
-  maxDate = new DateTime($('#search_5'), {
-    format: 'YYYY/MM/DD'
+
+  // Create date inputs
+  minDate = new DateTime($('#minDate'), {
+    format: 'YYYY/MM/DD',
+  });
+  maxDate = new DateTime($('#maxDate'), {
+    format: 'YYYY/MM/DD',
   });
 
   // DataTables initialisation
   var table = $('#example').DataTable();
 
   // Refilter the table
-  $('#search_4, #search_5').on('change', function () {
+  $('#minDate, #maxDate').on('change', function () {
     table.draw();
   });
 });
